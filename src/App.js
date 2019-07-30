@@ -1,10 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route } from 'react-router-dom'
+import Registration from './Routes/Registration/Registration'
 
 function App() {
   return (
     <div className="App">
+      <Route path='/register' render={() => <Registration />} />
     </div>
   );
 }
