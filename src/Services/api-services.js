@@ -3,14 +3,13 @@ import TokenServices from './token-services'
 
 const ApiServices = {
   postNewUser(username, password) {
-    const newUser = { username, password }
 
     return fetch(`${config.API_ENDPOINT}/auth/register`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
-      body: JSON.stringify( newUser ),
+      body: JSON.stringify({ username, password }),
     })
     .then(res => {
       return (!res.ok)
@@ -19,6 +18,7 @@ const ApiServices = {
     })
   },
   postLogin(username, password) {
+    console.log(config)
     return fetch(`${config.API_ENDPOINT}/auth/login`, {
       method: 'POST',
       headers: {

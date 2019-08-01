@@ -55,7 +55,11 @@ export default class Login extends React.Component {
   render() {
     return(
       <section className='login-area'>
-        <LoginForm />
+        <LoginForm 
+          updateUsername={this.updateUsername}
+          updatePassword={this.updatePassword}
+          handleSubmitLogin={this.handleSubmitLogin}
+        />
       </section>
     )
   }

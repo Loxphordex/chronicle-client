@@ -39,7 +39,8 @@ export default class Registration extends React.Component {
     this.setState({ password })
   }
 
-  handlieSubmitUser = (event) => {
+  handleSubmitUser = (event) => {
+    console.log('handleSubmitUser triggered')
     event.preventDefault()
 
     const { username, password } = this.state
@@ -68,7 +69,7 @@ export default class Registration extends React.Component {
           password={password}
           updateUsername={this.updateUsername}
           updatePassword={this.updatePassword}
-          handlieSubmitUser={this.handlieSubmitUser}
+          handleSubmitUser={this.handleSubmitUser}
         />
       </section>
     )
