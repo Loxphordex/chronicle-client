@@ -4,6 +4,7 @@ import ChronicleContext from './Context/chronicle-context'
 import Header from './Components/Header/Header'
 import Landing from './Routes/Landing/Landing'
 import Registration from './Routes/Registration/Registration'
+import Login from './Routes/Login/Login'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -22,7 +23,8 @@ export default class App extends React.Component {
 
           <Route path='/' render={() => <Header />} />
           <Route exact path='/' render={() => <Landing />} />
-          <Route path='/register' render={() => <Registration />} />
+          <Route path='/register' render={({ history }) => <Registration history={history} />} />
+          <Route path='/login' render={({ history }) => <Login history={history} />} />
 
         </ChronicleContext.Provider>
       </div>

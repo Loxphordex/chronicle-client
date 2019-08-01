@@ -5,6 +5,7 @@ export default class LandingPage extends React.Component {
   render() {
     return(
       <div className='landing-wrapper'>
+        <Link to='/login'>Login</Link>
         <Link to='/register'>Sign Up</Link>
       </div>
     )
